@@ -1,0 +1,44 @@
+<!doctype html>
+<html ng-app="ChangeBgModule">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="../framework/1.3.0.14/angular.js"></script>
+    <script src="../js/changeBg.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+     <link rel="stylesheet" type="text/css" href="../css/css1.css">
+</head>
+
+<body>
+
+
+  <div class="panel panel-primary">
+      <div class="panel-heading">
+           <div class="panel-title">angular双向数据绑定</div> 
+      </div>
+      <div class="panel-body" ng-controller='ChangeBgController'>
+          <div class="col-md-12">
+            <p class="{{bgColor}}">使用ngClass改变背景颜色</p>
+            <button class="btn btn-primary" ng-click='getBgGreen()'>修改背景颜色</button>
+          </div><br/>
+          <div class="col-md-12" ng-controller='NgClassController'>
+            <div ng-class='{error:isError,warning:isWarning}'>{{msgText}}</div>
+            <button class="btn btn-primary" ng-click='showError()'>设置为错误</button>
+            <button class="btn btn-primary" ng-click='showWarning()'>设置为警告</button>
+          </div><br/>
+          <div class="col-md-12" ng-controller='NgshowController'>
+            <button class="btn btn-primary" ng-click = 'showMenu()'>toggle menu</button>
+            <ul ng-show='menuState.show'>
+              <li>Menu one</li>
+              <li>Menu one</li>
+              <li>Menu two</li>
+              <li>Menu one</li>
+            </ul>
+          </div>
+                   
+      </div>
+  </div>
+  
+</body>
+
+</html>
