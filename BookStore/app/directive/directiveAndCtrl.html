@@ -1,0 +1,22 @@
+<!doctype html>
+<html ng-app="DirectiveAndCtrl">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="../framework/1.3.0.14/angular.js"></script>
+    <script src="../js/directiveAndCtrl.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+</head>
+
+<body>
+  <div ng-controller='myCtrl1'>
+  	<loader howtoload='loadData()'>鼠标滑入加载1</loader>
+  	<!--通过给指令添加属性实现多个controller共用一个directive-->
+  </div>
+  <!--多个controller时，体现指令的复用性-->
+   <div ng-controller='myCtrl2'>
+  	<loader howtoload='loadData2()'>鼠标滑入加载2</loader>
+  </div>
+</body>
+
+</html>
